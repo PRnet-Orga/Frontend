@@ -9,7 +9,7 @@ function Footer() {
       <div className='w-full h-auto max-[493px]:mt-9 mr-5'>
         <Image src='/Icon/logo.png' alt='logo' width={124} height={80} className=''/>
       </div>
-      <div className='flex justify-center items-center gap-[5rem] flex-wrap max-[1317px]:gap-[2rem] max-[1317px]:mt-[2rem] max-[1317px]:mb-[2rem]  max-[493px]:gap-[1rem] max-[493px]:flex-col max-[493px]:items-start'>
+      <div className='flex justify-center items-center gap-[5rem] max-lg:flex-wrap max-[1317px]:gap-[2rem] max-[1317px]:mt-[2rem] max-[1317px]:mb-[2rem]  max-[493px]:gap-[1rem] max-[493px]:flex-col max-[493px]:items-start'>
         <span>AGB </span>
         <span>Impressum </span>
         <span>Datenschutz </span>
