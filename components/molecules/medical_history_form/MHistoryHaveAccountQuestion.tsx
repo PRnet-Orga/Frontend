@@ -9,8 +9,8 @@ const MHistoryHaveAccountQuestion = () => {
         Haben Sie bereits ein Konto?<span className="text-[#D7000D] font-bold">*</span>
       </p>
       <div className="flex">
-        <Radiobtn content="Ja" className=" w-[50%]"/>
-        <RadiobtnChecked className="" content="Nein" />
+        <Radiobtn name="acc" content="Ja" className=" w-[50%]"/>
+        <RadiobtnChecked name="acc" className="" content="Nein" />
       </div>
     </div>
   );

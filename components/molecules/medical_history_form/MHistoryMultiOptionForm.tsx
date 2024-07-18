@@ -13,9 +13,9 @@ const MHistoryMultiOptionForm = () => {
                 </span>
             </span>
             <div className=" mt-[16px] flex w-full items-center justify-between border-b border-[rgba(0,0,0,0.07)] pb-[20px]">
-                <RadiobtnChecked className=" w-[100%]" content="Nein" />
+                <RadiobtnChecked name="medication" className=" w-[100%]" content="Nein" />
                 <div className=" flex gap-[32px] items-center justify-start w-full">
-                    <Radiobtn className="" content="Ja" />
+                    <Radiobtn name="medication" className="" content="Ja" />
                     <MHistoryInputThin content="Derzeitige Medikamente" />
                 </div>
             </div>
@@ -26,9 +26,9 @@ const MHistoryMultiOptionForm = () => {
                 </span>
             </span>
             <div className=" mt-[16px] flex w-full items-center justify-between">
-                <RadiobtnChecked className=" w-[100%]" content="Nein" />
+                <RadiobtnChecked name="allergies" className=" w-[100%]" content="Nein" />
                 <div className=" flex gap-[32px] items-center justify-start w-full">
-                    <Radiobtn className="" content="Ja" />
+                    <Radiobtn name="allergies" className="" content="Ja" />
                     <MHistoryInputThin content="Papaja" />
                 </div>
             </div>
@@ -36,10 +36,10 @@ const MHistoryMultiOptionForm = () => {
                 Sind Ihre Allergologen darüber informiert, dass Sie eine Therapie mit medizinischem Cannabis beginnen möchten, und sehen Ihre Ärzte keine Kontraindikationen?
             </span>
             <div className=" mt-[16px] flex w-full items-center justify-between border-b border-[rgba(0,0,0,0.07)] pb-[20px]">
-                
-                <RadiobtnChecked className="" content="Nein" />
-                <Radiobtn className="" content="Ja" />
-                <Radiobtn className="w-[40%]" content="Ich habe noch nicht mit meinen Ärzten darüber gesprochen." />
+
+                <RadiobtnChecked name="allergists" className="" content="Nein" />
+                <Radiobtn name="allergists" className="" content="Ja" />
+                <Radiobtn name="allergists" className="w-[40%]" content="Ich habe noch nicht mit meinen Ärzten darüber gesprochen." />
             </div>
             <span className="text-[16px] font-normal w-full mt-[36px]">
                 Leiden Sie an chronischen Krankheiten, einschließlich psychischer Erkrankungen?
@@ -48,9 +48,9 @@ const MHistoryMultiOptionForm = () => {
                 </span>
             </span>
             <div className=" mt-[16px] flex w-full items-center justify-between border-b border-[rgba(0,0,0,0.07)] pb-[20px]">
-                <RadiobtnChecked className=" w-[100%]" content="Nein" />
+                <RadiobtnChecked name="chronic " className=" w-[100%]" content="Nein" />
                 <div className=" flex gap-[32px] items-center justify-start w-full">
-                    <Radiobtn className="" content="Ja" />
+                    <Radiobtn name="chronic " className="" content="Ja" />
                     <MHistoryInputThin content="Chronische Krankheiten" />
                 </div>
             </div>
@@ -58,8 +58,8 @@ const MHistoryMultiOptionForm = () => {
                 Zahlen Sie selbst oder sind Sie privat versichert?
             </span>
             <div className=" mt-[16px] flex w-full items-center justify-start ">
-                <RadiobtnChecked className=" w-[50%]" content="Ich bin Selbstzahler" />
-                <Radiobtn className="" content="Ich bin privat versichert" />
+                <RadiobtnChecked name="pay " className=" w-[50%]" content="Ich bin Selbstzahler" />
+                <Radiobtn name="pay " className="" content="Ich bin privat versichert" />
             </div>
         </div>
     );
