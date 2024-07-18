@@ -3,9 +3,13 @@ import MHistoryMultiSelectionBtn from "../../atoms/medical_history_form/MHistory
 import { MHistoryMultiData } from "../../../data";
 import MHistoryInputLong from "../../atoms/medical_history_form/MHistoryInputLong";
 
-const MHistoryMultiSelect = () => {
+interface MHistoryMultiSelectProps {
+  disabled: boolean;
+}
+
+const MHistoryMultiSelect:React.FC<MHistoryMultiSelectProps> = ({ disabled }) => {
   return (
-    <div className=" w-full flex flex-col justify-start items-start mt-[20px] bg-white p-[50px] rounded-[36px] Myshadow">
+    <div className={`multi-select ${disabled ? 'disable-attr flex w-full flex-col justify-start items-start mt-[20px] bg-white p-[50px] rounded-[36px] Myshadow' : 'w-full flex flex-col justify-start items-start mt-[20px] bg-white p-[50px] rounded-[36px] Myshadow'}`}>
       <h3 className=" font-extrabold text-[20px]">
         Welche Symptome haben Sie?<span className=" text-[#D7000D]">*</span>
       </h3>

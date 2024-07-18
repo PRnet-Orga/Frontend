@@ -4,7 +4,7 @@ import MHistoryHaveAccountPage from "../../features/medical_history_form/MHistor
 
 export default function Home() {
   return (
-    <main className="flex  flex-col pt-20">
+    <main className="flex  flex-col pt-20 bg-[rgba(243,243,243)]">
       <MHistoryHaveAccountPage />
     </main>
   );

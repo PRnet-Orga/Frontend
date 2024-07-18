@@ -1,16 +1,52 @@
+"use client";
+
 import React from "react";
 import Radiobtn from "../../atoms/medical_history_form/Radiobtn";
 import RadiobtnChecked from "../../atoms/medical_history_form/RadiobtnChecked";
+import MHistoryInput from "../../atoms/medical_history_form/MHistoryInput";
+import Button from "../../atoms/Button";
 
-const MHistoryHaveAccountQuestion = () => {
+interface Props {
+  setIsOne: (value: boolean) => void;
+  isOne: boolean;
+}
+const MHistoryHaveAccountQuestion = ({ setIsOne, isOne }: Props) => {
   return (
-    <div className="w-[51.25rem] h-40 rounded-[2.25rem] p-[3.125rem] bg-white flex flex-col justify-between mx-auto mt-[40px] Myshadow">
+    <div className="w-full h-auto rounded-[2.25rem] p-[3.125rem] bg-white flex flex-col justify-between mx-auto mt-[40px] Myshadow">
       <p className=" text-[16px] font-normal">
-        Haben Sie bereits ein Konto?<span className="text-[#D7000D] font-bold">*</span>
+        Haben Sie bereits ein Konto?
+        <span className="text-[#D7000D] font-bold">*</span>
       </p>
-      <div className="flex">
-        <Radiobtn name="acc" content="Ja" className=" w-[50%]"/>
-        <RadiobtnChecked name="acc" className="" content="Nein" />
+      <div className="flex mt-[16px]">
+        <Radiobtn
+          name="acc"
+          content="Ja"
+          className="w-[50%]"
+          onChange={() => setIsOne(true)}
+        />
+        <RadiobtnChecked
+          name="acc"
+          className=""
+          content="Nein"
+          onChange={() => setIsOne(false)}
+        />
+      </div>
+      <div
+        className={`multi-select ${
+          isOne ? "flex flex-col mt-[24px]" : "hidden flex-col"
+        }`}
+      >
+        <p>
+          Geben Sie Ihre E-Mail-Adresse ein und erhalten Sie den Link zu einem
+          vorausgefüllten Fragebogen.
+        </p>
+        <div className="flex justify-between items-center gap-3 md:flex-row flex-col">
+          <MHistoryInput content="E-mail" />
+          <Button
+            content="senden"
+            className="md:w-[139px] w-full mt-[12px] bg-[rgba(65,5,126,1)] hover:border-[3px] hover:border-[rgba(65,5,126,1)] hover:bg-white hover:text-[rgba(65,5,126,1)] rounded-[60px] px-[20px] py-[10px] text-[16px] font-bold text-white"
+          />
+        </div>
       </div>
     </div>
   );

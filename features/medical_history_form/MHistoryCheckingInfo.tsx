@@ -4,18 +4,19 @@ import MHistoryName from "../../components/atoms/medical_history_form/MHistoryNa
 import MHistroyHerr from "../../components/atoms/medical_history_form/MHistroyHerr";
 import MHistoryDate from "../../components/atoms/medical_history_form/MHistoryDate";
 
-interface OptionProps {
-  option: Array<string>;
-  optionInfo: string;
+interface IMHistoryCheckingInfo {  
+  disabled:boolean;
 }
 
-const MHistoryCheckingInfo: React.FC = () => {
+const MHistoryCheckingInfo:React.FC<IMHistoryCheckingInfo> = ({disabled}) => {
   return (
-    <div className="bg-white h-[20rem] rounded-[2.25rem] p-[3.125rem] gap-[2.4rem] mt-[20px] Myshadow">
-      <h2 className=" font-extrabold text-[20px]">Deine Kontaktdaten</h2>
-      <div className="flex flex-col gap-4">
+    <div className={`multi-select ${ disabled ? 
+      "disable-attr bg-white h-auto w-full rounded-[2.25rem] p-[3.125rem] gap-[2.4rem] mt-[20px] Myshadow"
+      : "bg-white h-auto rounded-[2.25rem] p-[3.125rem] gap-[2.4rem] mt-[20px] Myshadow"}`}>
+      <h2 className=" font-extrabold text-[20px] mb-[24px]">Deine Kontaktdaten</h2>
+      <div className="flex flex-col gap-4 w-full">
         <MHistoryInput content="E-mail" />
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap items-start justify-start gap-4 w-full max-[650px]:flex-nowrap max-[650px]:flex-col">
           <MHistroyHerr optionInfo="Herr" option={["Herrin", "Frau", "Keine Angabe"]} />
           <MHistoryName name="Ihre Vorname" />
           <MHistoryName name="Ihre Nachname" />
